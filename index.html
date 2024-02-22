@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S7 School</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #008080; /* Teal text */
+            overflow: scroll; /* Add scrollbar */
+            background-color: #fff; /* White background */
+        }
+
+        header {
+            background-color: #008080; /* Teal background */
+            color: #fff; /* White text */
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Box shadow for header */
+            transition: background-color 0.3s ease; /* Smooth color transition on scroll */
+        }
+
+        header:hover {
+            background-color: #fff; /* White background on hover */
+            color: #008080; /* Teal text on hover */
+        }
+
+        nav {
+            background-color: #fff; /* White background for the menu bar */
+            color: #008080; /* Teal text */
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Box shadow for navigation */
+        }
+
+        nav a {
+            color: #008080; /* Teal text for menu items */
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            display: inline-block;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        nav a:hover {
+            color: #fff; /* White text on hover */
+            background-color: #008080; /* Teal background on hover */
+            border-radius: 5px; /* Rounded corners on hover */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #008080; /* Teal border for sections */
+            border-radius: 10px; /* Rounded corners for sections */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Box shadow for sections */
+            opacity: 0; /* Initially set opacity to 0 for fade-in effect */
+            animation: fadeIn 1s ease-in-out forwards; /* Animation for fade-in effect */
+            transition: transform 0.5s ease, background 0.5s ease; /* Smooth transition for scrolling animation and background color */
+            background-color: #fff; /* White background */
+            color: #008080; /* Teal text */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            background-color: #008080; /* Teal background */
+            color: #fff; /* White text */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2); /* Box shadow for footer */
+        }
+
+        footer a {
+            color: #fff; /* White text for footer links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+      .goo{
+        width:10%;
+        height:10%;
+        border-radius: 100px;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>S7 Schools</h1>
+        <img src="Black Minimalist Initial Font BE Logo (1).png" alt="S7 Schools" class="goo">
+        <p>Empowering Minds, Shaping Futures</p>
+    </header>
+
+    <nav>
+        <a href="index.html" onclick="scrollToSection('home')">Home</a>
+        <a href="s7 schools social.html" onclick="scrollToSection('social')">Social Studies</a>
+        <a href="s7 schools science.html" onclick="scrollToSection('science')">Science</a>
+        <a href="s7 schools math.html" onclick="scrollToSection('maths')">Maths</a>
+        <a href="s7 schools english.html" onclick="scrollToSection('english')">English</a>
+        <a href="s7 schools about.html" onclick="scrollToSection('english')">About Us</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to S7 Schools</h2>
+        <p>At S7 School, we believe in fostering a dynamic learning environment where every student can thrive. Our commitment is to provide quality education that goes beyond the traditional classroom setting. With experienced faculty, state-of-the-art facilities, and a supportive community, we strive to nurture well-rounded individuals prepared to excel in a rapidly evolving world.</p>
+        <p>Our curriculum is designed to engage students in critical thinking, problem-solving, and creativity. Through hands-on experiences, collaborative projects, and real-world applications, we inspire a lifelong love of learning.</p>
+        <p>Join us at S7 School and embark on a journey of discovery, growth, and endless possibilities!</p>
+        <!-- Additional text to enrich the section -->
+        <p>Founded in 2005, S7 School has been a beacon of excellence in education for over two decades. We are dedicated to providing a holistic learning experience that caters to the diverse needs of our students.</p>
+        <p>With a focus on academic rigor, character development, and personal growth, we prepare our students to become responsible global citizens and leaders of tomorrow.</p>
+        <p>Our commitment to innovation and continuous improvement drives us to stay at the forefront of education, incorporating the latest teaching methodologies and technologies into our curriculum.</p>
+        <p>At S7 School, we recognize the importance of fostering a supportive and inclusive community where every student feels valued, respected, and empowered to reach their full potential.</p>
+        <p>We invite you to explore our website to learn more about our programs, faculty, and campus facilities. Feel free to contact us with any questions or to schedule a visit. We look forward to welcoming you to the S7 School family!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 S7 Schools. All rights reserved. | Phone: 5948556329 | Email: <a href="mailto:s7schools@gmail.com">s7schools@gmail.com</a></p>
+    </footer>
+
+    <script>
+        // Function to scroll to a specific section
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Function to trigger fade-in animation for sections on scroll
+        window.addEventListener('scroll', function () {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function (section) {
+                var position = section.getBoundingClientRect();
+                if (position.top < window.innerHeight - 50) {
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

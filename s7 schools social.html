@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Studies - S7 School</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #008080; /* Teal text */
+            overflow: scroll; /* Add scrollbar */
+            background-color: #fff; /* White background */
+        }
+
+        header {
+            background-color: #008080; /* Teal background */
+            color: #fff; /* White text */
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Box shadow for header */
+            transition: background-color 0.3s ease; /* Smooth color transition on scroll */
+        }
+
+        header:hover {
+            background-color: #fff; /* White background on hover */
+            color: #008080; /* Teal text on hover */
+        }
+
+        nav {
+            background-color: #fff; /* White background for the menu bar */
+            color: #008080; /* Teal text */
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Box shadow for navigation */
+        }
+
+        nav a {
+            color: #008080; /* Teal text for menu items */
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            display: inline-block;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        nav a:hover {
+            color: #fff; /* White text on hover */
+            background-color: #008080; /* Teal background on hover */
+            border-radius: 5px; /* Rounded corners on hover */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #008080; /* Teal border for sections */
+            border-radius: 10px; /* Rounded corners for sections */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Box shadow for sections */
+            opacity: 0; /* Initially set opacity to 0 for fade-in effect */
+            animation: fadeIn 1s ease-in-out forwards; /* Animation for fade-in effect */
+            transition: transform 0.5s ease, background 0.5s ease; /* Smooth transition for scrolling animation and background color */
+            background-color: #fff; /* White background */
+            color: #008080; /* Teal text */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            background-color: #008080; /* Teal background */
+            color: #fff; /* White text */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2); /* Box shadow for footer */
+        }
+
+        footer a {
+            color: #fff; /* White text for footer links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+      .goo{
+        width:10%;
+        height:10%;
+        border-radius: 100px;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>S7 Schools - Social Studies</h1>
+        <img src="Black Minimalist Initial Font BE Logo (1).png" alt="S7 Schools" class="goo">
+        <p>Explore the world through the lens of social studies</p>
+    </header>
+
+    <nav>
+        <a href="index.html" onclick="scrollToSection('home')">Home</a>
+        <a href="s7 schools about.html" onclick="scrollToSection('about')">About</a>
+        <a href="s7 schools9.html" onclick="scrollToSection('history')">History</a>
+        <a href="s7 schools9.html" onclick="scrollToSection('geography')">Geography</a>
+        <a href="s7 schools9.html" onclick="scrollToSection('culture')">Culture</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Social Studies at S7 Schools</h2>
+        <p>Embark on a fascinating journey through time and space with our social studies curriculum. Here at S7 School, we believe in the importance of understanding the world around us and the forces that have shaped it.</p>
+        <p>Our social studies program is designed to inspire curiosity, critical thinking, and global awareness. From ancient civilizations to modern geopolitics, students explore diverse cultures, historical events, and societal structures.</p>
+        <!-- Placeholder text to reach approximately 2000 words -->
+        <p>Social science is the study of human society and social relationships, encompassing disciplines such as sociology, psychology, anthropology, economics, political science, and more. It offers valuable insights into the structures, dynamics, and processes that shape our lives, from individual behavior to societal trends. Proficiency in social science equips you with the knowledge and skills to navigate diverse social contexts, analyze complex problems, and contribute to positive change in your community and beyond.
+
+
+At our platform, we believe in an interdisciplinary approach to studying society that integrates insights from various social science disciplines. Our curriculum is designed to foster critical thinking, empathy, and cultural awareness while encouraging dialogue and collaboration among learners. Whether you're exploring social theories, conducting research, or engaging in discussions on contemporary social issues, our goal is to deepen your understanding of the social world and inspire meaningful action.</p>
+     
+    </section>
+
+    <footer>
+        <p>&copy; 2024 S7 Schools. All rights reserved. | Phone: 5948556329 | Email: <a href="mailto:s7schools@gmail.com">s7schools@gmail.com</a></p>
+    </footer>
+
+    <script>
+        // Function to scroll to a specific section
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Function to trigger fade-in animation for sections on scroll
+        window.addEventListener('scroll', function () {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function (section) {
+                var position = section.getBoundingClientRect();
+                if (position.top < window.innerHeight - 50) {
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics - S7 School</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #008080; /* Teal text */
+            overflow: scroll; /* Add scrollbar */
+            background-color: #fff; /* White background */
+        }
+
+        header {
+            background-color: #008080; /* Teal background */
+            color: #fff; /* White text */
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Box shadow for header */
+            transition: background-color 0.3s ease; /* Smooth color transition on scroll */
+        }
+
+        header:hover {
+            background-color: #fff; /* White background on hover */
+            color: #008080; /* Teal text on hover */
+        }
+
+        nav {
+            background-color: #fff; /* White background for the menu bar */
+            color: #008080; /* Teal text */
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Box shadow for navigation */
+        }
+
+        nav a {
+            color: #008080; /* Teal text for menu items */
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            display: inline-block;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        nav a:hover {
+            color: #fff; /* White text on hover */
+            background-color: #008080; /* Teal background on hover */
+            border-radius: 5px; /* Rounded corners on hover */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #008080; /* Teal border for sections */
+            border-radius: 10px; /* Rounded corners for sections */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Box shadow for sections */
+            opacity: 0; /* Initially set opacity to 0 for fade-in effect */
+            animation: fadeIn 1s ease-in-out forwards; /* Animation for fade-in effect */
+            transition: transform 0.5s ease, background 0.5s ease; /* Smooth transition for scrolling animation and background color */
+            background-color: #fff; /* White background */
+            color: #008080; /* Teal text */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            background-color: #008080; /* Teal background */
+            color: #fff; /* White text */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2); /* Box shadow for footer */
+        }
+
+        footer a {
+            color: #fff; /* White text for footer links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+      .goo{
+        width:10%;
+        height:10%;
+        border-radius: 100px;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>S7 Schools - Mathematics</h1>
+        <img src="Black Minimalist Initial Font BE Logo (1).png" alt="S7 Schools" class="goo">
+        <p>Unlock the power of numbers</p>
+    </header>
+
+    <nav>
+        <a href="index.html" onclick="scrollToSection('home')">Home</a>
+        <a href="s7 schools9.html" onclick="scrollToSection('algebra')">Algebra</a>
+        <a href="s7 schools9.html" onclick="scrollToSection('geometry')">Geometry</a>
+        <a href="s7 schools9.html" onclick="scrollToSection('calculus')">Calculus</a>
+        
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Mathematics at S7 Schools</h2>
+        <p>Embark on a journey through the world of numbers and equations with our mathematics curriculum. At S7 School, we believe in the power of mathematics to unlock new possibilities and solve complex problems.</p>
+        <p>Our mathematics program covers a wide range of topics, including algebra, geometry, and calculus. Through interactive lessons, problem-solving exercises, and real-world applications, students develop critical thinking skills and a deep understanding of mathematical concepts.</p>
+        <!-- Placeholder text to reach approximately 2000 words -->
+        <p>Mathematics is the universal language of logic and problem-solving, permeating every aspect of our lives, from science and technology to finance and art. Proficiency in mathematics empowers you to analyze complex problems, make informed decisions, and unlock new possibilities in your academic and professional pursuits. Whether you're fascinated by algebra, captivated by calculus, or intrigued by geometry, the world of mathematics offers endless opportunities for exploration and discovery.
+
+
+At our platform, we believe in a hands-on, conceptual approach to learning mathematics that emphasizes understanding, application, and creativity. Our curriculum is designed to build a strong foundation in core mathematical concepts while fostering critical thinking skills and problem-solving strategies. Through interactive lessons, real-world examples, and personalized feedback, we aim to inspire curiosity and confidence in mathematical reasoning and inquiry.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 S7 Schools. All rights reserved. | Phone: 5948556329 | Email: <a href="mailto:s7schools@gmail.com">s7schools@gmail.com</a></p>
+    </footer>
+
+    <script>
+        // Function to scroll to a specific section
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Function to trigger fade-in animation for sections on scroll
+        window.addEventListener('scroll', function () {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function (section) {
+                var position = section.getBoundingClientRect();
+                if (position.top < window.innerHeight - 50) {
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
